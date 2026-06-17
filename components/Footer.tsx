@@ -13,27 +13,19 @@ export default function Footer() {
             <div style={{ marginBottom: "24px" }}>
               <div
                 style={{
-                  fontFamily: "var(--font-playfair), serif",
-                  fontSize: "1.6rem",
-                  fontWeight: 700,
-                  color: "#c9a86c",
-                  letterSpacing: "0.06em",
-                  lineHeight: 1,
+                  backgroundColor: "#ffffff",
+                  padding: "8px 14px",
+                  borderRadius: "6px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
                 }}
               >
-                APARTMENT
-              </div>
-              <div
-                style={{
-                  fontSize: "0.6rem",
-                  fontWeight: 400,
-                  color: "#666",
-                  letterSpacing: "0.3em",
-                  textTransform: "uppercase",
-                  marginTop: "4px",
-                }}
-              >
-                SERVICE
+                <img
+                  src="/logo.jpeg"
+                  alt="The Leisure's Pvt.Ltd."
+                  style={{ height: "52px", width: "auto", display: "block" }}
+                />
               </div>
             </div>
             <p

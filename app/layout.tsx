@@ -16,10 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Apartment Service | Premium Serviced Apartments in Chennai",
+  title: "The Leisure's | Premium Serviced Apartments in Chennai",
   description:
-    "Apartment Service offers luxury serviced apartments across Chennai — The Den Villa (S Kolathur), The Lavender (Kovilambakkam), The Ocean Shores (Thoraipakkam), and The Value Stay (Nanganallur).",
-  keywords: "serviced apartments Chennai, luxury apartments, furnished apartments, The Den Villa, The Lavender, The Ocean Shores, The Value Stay",
+    "The Leisure's Pvt.Ltd. offers luxury serviced apartments across Chennai — The Den Villa (S Kolathur), The Lavender (Kovilambakkam), The Ocean Shores (Thoraipakkam), and The Value Stay (Nanganallur).",
+  keywords: "serviced apartments Chennai, luxury apartments, The Leisures, furnished apartments, The Den Villa, The Lavender, The Ocean Shores, The Value Stay",
+  icons: {
+    icon: "/logo.jpeg",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
+  },
 };
 
 export default function RootLayout({

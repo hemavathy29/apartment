@@ -47,26 +47,26 @@ export default function Navbar() {
             <span
               style={{
                 fontFamily: "var(--font-playfair), serif",
-                fontSize: "1.5rem",
+                fontSize: "1.4rem",
                 fontWeight: 700,
                 color: "#c9a86c",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.04em",
               }}
             >
-              APARTMENT
+              The Leisure&apos;s
             </span>
             <span
               style={{
                 fontFamily: "var(--font-inter), sans-serif",
-                fontSize: "0.65rem",
+                fontSize: "0.6rem",
                 fontWeight: 400,
                 color: "#c9c9c9",
-                letterSpacing: "0.25em",
+                letterSpacing: "0.22em",
                 textTransform: "uppercase",
                 marginTop: "3px",
               }}
             >
-              SERVICE
+              Pvt. Ltd.
             </span>
           </div>
         </Link>
