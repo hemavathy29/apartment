@@ -13,7 +13,7 @@ export default function ContactSection() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
   };
@@ -78,10 +78,24 @@ export default function ContactSection() {
                 label="Phone"
                 value={
                   <>
-                    <a href="tel:9962237575" style={{ color: "#333", textDecoration: "none" }}>+91 99622 37575</a>
+                    <a href="tel:9841647575" style={{ color: "#333", textDecoration: "none" }}>+91 98416 47575</a>
                     <br />
-                    <a href="tel:9344555155" style={{ color: "#333", textDecoration: "none" }}>+91 93445 55155</a>
+                    <a href="tel:7845994384" style={{ color: "#333", textDecoration: "none" }}>+91 78459 94384</a>
                   </>
+                }
+              />
+              <ContactItem
+                icon={
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a86c" strokeWidth="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                }
+                label="Email"
+                value={
+                  <a href="mailto:info@theleisures.in" style={{ color: "#333", textDecoration: "none" }}>
+                    info@theleisures.in
+                  </a>
                 }
               />
               <ContactItem

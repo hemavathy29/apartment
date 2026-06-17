@@ -160,11 +160,14 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div>
                 <div style={{ color: "#555", fontSize: "0.72rem", letterSpacing: "0.1em", marginBottom: "4px" }}>PHONE</div>
-                <a href="tel:9962237575" style={{ color: "#aaa", fontSize: "0.88rem", textDecoration: "none", display: "block" }}>
-                  +91 99622 37575
+                <a href="tel:9841647575" style={{ color: "#aaa", fontSize: "0.88rem", textDecoration: "none", display: "block" }}>
+                  +91 98416 47575
                 </a>
-                <a href="tel:9344555155" style={{ color: "#aaa", fontSize: "0.88rem", textDecoration: "none", display: "block" }}>
-                  +91 93445 55155
+                <a href="tel:7845994384" style={{ color: "#aaa", fontSize: "0.88rem", textDecoration: "none", display: "block" }}>
+                  +91 78459 94384
+                </a>
+                <a href="mailto:info@theleisures.in" style={{ color: "#aaa", fontSize: "0.88rem", textDecoration: "none", display: "block", marginTop: "4px" }}>
+                  info@theleisures.in
                 </a>
               </div>
               <div>

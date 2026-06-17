@@ -153,8 +153,8 @@ export default function ApartmentDetailClient({ apt }: { apt: Apartment }) {
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
                   {[
-                    { tel: "9962237575", label: "+91 99622 37575" },
-                    { tel: "9344555155", label: "+91 93445 55155" },
+                    { tel: "9841647575", label: "+91 98416 47575" },
+                    { tel: "7845994384", label: "+91 78459 94384" },
                   ].map((p) => (
                     <a key={p.tel} href={`tel:${p.tel}`} style={{ display: "flex", alignItems: "center", gap: "12px", color: "#d0c8b8", textDecoration: "none", fontSize: "0.9rem", padding: "12px 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a86c" strokeWidth="2">

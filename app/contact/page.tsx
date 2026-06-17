@@ -59,20 +59,20 @@ export default function ContactPage() {
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 ),
-                label: "+91 99622 37575",
-                sub: "+91 93445 55155",
-                href: "tel:9962237575",
+                label: "+91 98416 47575",
+                sub: "+91 78459 94384",
+                href: "tel:9841647575",
               },
               {
                 icon: (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a86c" strokeWidth="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                    <circle cx="12" cy="10" r="3" />
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                 ),
-                label: "4 Locations",
-                sub: "Across Chennai",
-                href: "#",
+                label: "info@theleisures.in",
+                sub: "We reply within 24 hours",
+                href: "mailto:info@theleisures.in",
               },
             ].map((item, i) => (
               <a
