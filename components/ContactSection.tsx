@@ -15,6 +15,21 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const selectedApartment = form.apartment
+      ? apartments.find((a) => a.slug === form.apartment)?.name ?? form.apartment
+      : "Not specified";
+
+    const message = encodeURIComponent(
+      `🏠 *New Apartment Inquiry*\n\n` +
+      `*Name:* ${form.name}\n` +
+      `*Email:* ${form.email}\n` +
+      `*Phone:* ${form.phone}\n` +
+      `*Apartment:* ${selectedApartment}\n` +
+      `*Message:* ${form.message || "No message provided"}`
+    );
+
+    window.open(`https://wa.me/919841647575?text=${message}`, "_blank");
     setSubmitted(true);
   };
 

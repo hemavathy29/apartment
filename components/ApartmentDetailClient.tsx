@@ -11,6 +11,20 @@ export default function ApartmentDetailClient({ apt }: { apt: Apartment }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
+  const handleInquirySubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const message = encodeURIComponent(
+      `🏠 *Apartment Inquiry — ${apt.name}*\n\n` +
+      `*Location:* ${apt.location}\n` +
+      `*Name:* ${form.name}\n` +
+      `*Email:* ${form.email}\n` +
+      `*Phone:* ${form.phone}\n` +
+      `*Message:* ${form.message || "No message provided"}`
+    );
+    window.open(`https://wa.me/919841647575?text=${message}`, "_blank");
+    setSubmitted(true);
+  };
+
   const otherApartments = apartments.filter((a) => a.slug !== apt.slug).slice(0, 3);
 
   return (
@@ -196,7 +210,7 @@ export default function ApartmentDetailClient({ apt }: { apt: Apartment }) {
                   Inquire: {apt.name}
                 </h3>
                 <p style={{ color: "#888", fontSize: "0.85rem", marginBottom: "28px" }}>{apt.location}</p>
-                <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                <form onSubmit={handleInquirySubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
                   {[
                     { key: "name", label: "Full Name", type: "text" },
                     { key: "email", label: "Email", type: "email" },
