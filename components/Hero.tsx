@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { apartments } from "@/lib/apartments";
 
@@ -14,24 +14,24 @@ const slides = apartments.map((a) => ({
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
+  const animatingRef = useRef(false);
 
-  const goTo = useCallback(
-    (index: number) => {
-      if (animating) return;
-      setAnimating(true);
-      setCurrent(index);
-      setTimeout(() => setAnimating(false), 700);
-    },
-    [animating]
-  );
-
+  // Stable interval — functional update avoids stale closure on `current`
   useEffect(() => {
     const timer = setInterval(() => {
-      goTo((current + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, [current, goTo]);
+  }, []);
+
+  const goTo = (index: number) => {
+    if (animatingRef.current) return;
+    animatingRef.current = true;
+    setCurrent(index);
+    setTimeout(() => {
+      animatingRef.current = false;
+    }, 700);
+  };
 
   return (
     <section style={{ position: "relative", height: "100vh", minHeight: "600px", overflow: "hidden" }}>
